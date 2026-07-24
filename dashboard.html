@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Kehadiran - Noel & Ummi Dila</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 100px 20px 40px; /* space for top nav */
+            color: var(--text-main);
+        }
+        .dashboard-container {
+            background: rgba(25, 25, 25, 0.65);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            padding: 3.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .header h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, #f9d45e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 3.5rem;
+        }
+        .stat-box {
+            background: rgba(0,0,0,0.2);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+            background: rgba(0,0,0,0.3);
+        }
+        .stat-box h3 {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .stat-box p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .stat-box p i {
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+        .section-title {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
+        }
+        .ucapan-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .ucapan-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .ucapan-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateX(5px);
+        }
+        .ucapan-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .ucapan-name {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+        .ucapan-meta {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .badge.hadir {
+            background: rgba(22, 163, 74, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .badge.tidak-hadir {
+            background: rgba(220, 38, 38, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .ucapan-text {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+            padding: 16px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .admin-menu {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50px;
+            padding: 5px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .admin-menu a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 10px 24px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .admin-menu a:hover {
+            color: var(--white);
+        }
+        .admin-menu a.active {
+            color: #121212;
+            background: var(--primary);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .dashboard-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Admin Navigation Menu -->
+    <nav class="admin-menu">
+        <a href="scanner.html"><i class='bx bx-scan'></i> Scanner</a>
+        <a href="dashboard.html" class="active"><i class='bx bx-data'></i> Data Kehadiran</a>
+    </nav>
+
+    <div class="dashboard-container" style="margin-top: 60px;">
+        <div class="header">
+            <h2>Data Kehadiran</h2>
+            <p>Daftar Tamu & Ucapan / Kado Digital</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h3 id="stat-hadir">0</h3>
+                <p><i class='bx bx-user-check'></i> Orang Hadir</p>
+            </div>
+            <div class="stat-box">
+                <h3 id="stat-tidak">0</h3>
+                <p><i class='bx bx-user-x'></i> Tidak Hadir</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Ucapan & Konfirmasi Kehadiran</h3>
+        <div class="ucapan-list" id="ucapan-container">
+            <div style="text-align:center; padding: 40px; color: #999;">
+                <i class='bx bx-loader-alt bx-spin' style="font-size: 2rem;"></i>
+                <p style="margin-top: 10px;">Memuat data dari database...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('get_stats.php')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('stat-hadir').innerText = data.hadir;
+                    document.getElementById('stat-tidak').innerText = data.tidak_hadir;
+
+                    const container = document.getElementById('ucapan-container');
+                    container.innerHTML = '';
+
+                    if (data.ucapan && data.ucapan.length > 0) {
+                        data.ucapan.forEach(item => {
+                            const isHadir = item.kehadiran === 'Hadir';
+                            const badgeClass = isHadir ? 'badge hadir' : 'badge tidak-hadir';
+                            const dateStr = new Date(item.reg_date).toLocaleDateString('id-ID', {
+                                day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
+                            });
+                            
+                            const paxText = isHadir && item.jumlah_orang ? ` &bull; ${item.jumlah_orang} Orang` : '';
+
+                            container.innerHTML += `
+                                <div class="ucapan-item">
+                                    <div class="ucapan-item-header">
+                                        <div>
+                                            <h4 class="ucapan-name">${item.nama}</h4>
+                                            <div class="ucapan-meta">${dateStr}${paxText}</div>
+                                        </div>
+                                        <span class="${badgeClass}">${item.kehadiran}</span>
+                                    </div>
+                                    <div class="ucapan-text">
+                                        "${item.ucapan ? item.ucapan.replace(/\n/g, '<br>') : 'Tidak ada pesan'}"
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        container.innerHTML = `
+                            <div style="text-align:center; padding: 40px; color: #999;">
+                                <i class='bx bx-message-square-x' style="font-size: 3rem; margin-bottom:10px; color: #ccc;"></i>
+                                <p>Belum ada data ucapan atau kehadiran yang masuk.</p>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(err => {
+                    console.error("Error loading stats:", err);
+                    document.getElementById('ucapan-container').innerHTML = `
+                        <div style="text-align:center; padding: 40px; color: #ef4444;">
+                            <i class='bx bx-error-circle' style="font-size: 3rem; margin-bottom:10px;"></i>
+                            <p>Terjadi kesalahan saat memuat data. Pastikan database dan PHP sudah berjalan.</p>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>

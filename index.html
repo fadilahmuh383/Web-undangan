@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan - Dilah & Dinul</title>
+
+    <!-- Meta Tags untuk Thumbnail WhatsApp / Sosial Media -->
+    <meta property="og:title" content="The Wedding of Dilah & Dinul" />
+    <meta property="og:description" content="Pernikahan Dilah & Dinul. Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami." />
+    <meta property="og:image" content="https://the-wedding-of-dilah-dan-dinul.netlify.app/img/tema%200.12.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://the-wedding-of-dilah-dan-dinul.netlify.app/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons for modern icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+      <source src="audio/song1.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="music-btn" class="music-btn">
+      <i class="bx bx-music"></i>
+    </button>
+
+    <!-- Hamburger Menu -->
+    <nav class="hamburger-menu" id="hamburger-menu">
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="bx bx-menu"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#couple">Mempelai</a></li>
+        <li><a href="#lovestory">Kisah Kami</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#event">Acara</a></li>
+        <li><a href="#rsvp">Kehadiran</a></li>
+      </ul>
+    </nav>
+
+    <!-- Welcome Screen / Cover -->
+    <div id="welcome-screen" class="welcome-screen">
+      <div class="bg-slider" id="welcome-slider"></div>
+      <div class="welcome-content">
+        <p class="fade-in-text" style="animation-delay: 0.1s">The Wedding Of</p>
+        <h1 class="fade-in-text" style="animation-delay: 0.2s">
+          Dilah & Dinul
+        </h1>
+        <p class="fade-in-text" style="animation-delay: 0.3s">
+          Kepada Yth. Bapak/Ibu/Saudara/i
+        </p>
+        <h2 id="guest-name" class="fade-in-text" style="animation-delay: 0.4s">
+          Tamu Undangan
+        </h2>
+        <p class="apology fade-in-text" style="animation-delay: 0.5s">
+          Dengan segala hormat, kami mengundang Anda
+          untuk menghadiri acara penikahan kami. 
+          
+        </p>
+        <button
+          id="open-invitation"
+          class="btn-primary fade-in-text"
+          style="animation-delay: 0.6s"
+        >
+          <i class="bx bx-envelope-open"></i> Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="bg-slider" id="hero-slider"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="subtitle" data-aos="fade-up">The Wedding Of</p>
+          <h1 class="title" data-aos="fade-up" data-aos-delay="100">
+            Dilah & Dinul
+          </h1>
+          <p class="date" data-aos="fade-up" data-aos-delay="200">
+            24 . 07 . 2026
+          </p>
+
+          <div class="countdown" data-aos="fade-up" data-aos-delay="300">
+            <div class="time-box">
+              <span id="days">00</span>
+              <p>Hari</p>
+            </div>
+            <div class="time-box">
+              <span id="hours">00</span>
+              <p>Jam</p>
+            </div>
+            <div class="time-box">
+              <span id="minutes">00</span>
+              <p>Menit</p>
+            </div>
+            <div class="time-box">
+              <span id="seconds">00</span>
+              <p>Detik</p>
+            </div>
+          </div>
+
+          <div class="quran-quote" data-aos="fade-up" data-aos-delay="400" style="max-width: 800px; margin: 3rem auto 0; padding: 0 20px; z-index: 10; position: relative;">
+            <p style="font-style: italic; font-size: 0.95rem; line-height: 1.8; color: var(--text-light); font-weight: 300;">
+              "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir."
+            </p>
+            <p style="margin-top: 1rem; font-weight: 500; font-size: 0.9rem; color: var(--primary); letter-spacing: 2px;">
+              (QS. AR-RUM: 21)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Couple Section -->
+      <section id="couple" class="couple-section">
+        <div class="container">
+
+
+          <div class="couple-showcase">
+            <!-- Bride -->
+            <div class="person-poster bride-poster" data-aos="fade-up">
+              <div class="poster-overlay">
+                <span class="poster-label">THE BRIDE</span>
+                <h3 class="poster-name">Nurfadilah S.M</h3>
+                <hr class="poster-divider">
+                <span class="poster-parent-label">PUTRI PERTAMA DARI</span>
+                <p class="poster-parents" style="margin-bottom: 5px;">Bapak Syarifudin<br>& Ibu Rosmeri</p>
+                <a href="https://www.instagram.com/nfadilaaaaaah_?igsh=bmQ4N3Y5eHcycTU4" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--white); text-decoration: none; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.4); padding: 6px 15px; border-radius: 25px; transition: 0.3s; background: rgba(0,0,0,0.3);">
+                  <i class='bx bxl-instagram' style="font-size: 1.1rem; color: var(--primary);"></i> @nfadilaaaaaah_
+                </a>
+              </div>
+            </div>
+
+            <!-- Groom -->
+            <div class="person-poster groom-poster" data-aos="fade-up" data-aos-delay="200">
+              <div class="poster-overlay">
+                <span class="poster-label">THE GROOM</span>
+                <h3 class="poster-name">Dinul Islam S.Ak</h3>
+                <hr class="poster-divider">
+                <span class="poster-parent-label">PUTRA TERAKHIR DARI</span>
+                <p class="poster-parents" style="margin-bottom: 5px;">Bapak H. Anwar S.Pd<br>& Ibu ST. Utari</p>
+                <a href="https://www.instagram.com/dinul_islam_madinah?igsh=ZW1vY3FsaGJidnJ4" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--white); text-decoration: none; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.4); padding: 6px 15px; border-radius: 25px; transition: 0.3s; background: rgba(0,0,0,0.3);">
+                  <i class='bx bxl-instagram' style="font-size: 1.1rem; color: var(--primary);"></i> @dinul_islam_madinah
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Love Story / Quote Section from TikTok -->
+      <section id="lovestory" class="lovestory-section" style="padding: 100px 0; background: var(--bg-dark); position: relative; z-index: 2;">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 50px;">
+            <i class='bx bxs-quote-alt-left' style="font-size: 3rem; color: var(--primary); opacity: 0.5;"></i>
+            <h2 class="section-title" data-aos="fade-up" style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-top: 10px;">Kisah Kami</h2>
+          </div>
+
+          <div class="story-timeline" style="max-width: 800px; margin: 0 auto; position: relative; padding: 0 15px;">
+            
+            <!-- Item 1 -->
+            <div data-aos="fade-right" style="background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--primary); border-radius: 0 15px 15px 0; padding: 30px; margin-bottom: 40px; backdrop-filter: blur(10px); position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              <h3 style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <i class='bx bxs-heart'></i> Sebuah Perjalanan Pulang
+              </h3>
+              <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.8; font-style: italic; margin: 0;">
+                "Banyak yang berkata bahwa jatuh cinta adalah hal yang sederhana. Namun, tetap saling memilih di tengah badai, menjaga di saat rapuh, dan bertahan ketika dunia meminta menyerahâ€”itulah cinta yang sesungguhnya."
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div data-aos="fade-left" style="background: rgba(255, 255, 255, 0.03); border-right: 4px solid var(--primary); border-radius: 15px 0 0 15px; padding: 30px; margin-bottom: 40px; backdrop-filter: blur(10px); position: relative; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              <h3 style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; justify-content: flex-end; gap: 10px;">
+                Tentang Bertahan <i class='bx bxs-time'></i>
+              </h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin-bottom: 15px;">
+                Jika perjalanan ini harus diceritakan dari awal, mungkin tak akan selesai dalam sekali ucap. Sebab bagi kami, cinta bukan sekadar tentang pertemuan, melainkan tentang memilih tetap tinggal saat banyak alasan untuk pergi.
+              </p>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin: 0;">
+                Kami hanyalah dua manusia biasa, dengan segala kurang dan rapuhnya, yang terus belajar saling menjaga. Dalam setiap musim, kami percaya takdir mempertemukan bukan hanya untuk singgah, tetapi untuk saling menguatkan.
+              </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div data-aos="fade-right" style="background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--primary); border-radius: 0 15px 15px 0; padding: 30px; margin-bottom: 40px; backdrop-filter: blur(10px); position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              <h3 style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <i class='bx bxs-compass'></i> Ujian & Bukti
+              </h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin-bottom: 15px;">
+                Perjalanan ini tidak hanya dipenuhi bahagia, tetapi juga air mata, ragu, dan waktu yang menguji keyakinan. Ada saat langkah terasa berat, namun cinta selalu menemukan jalan untuk menguatkan.
+              </p>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin: 0;">
+                Kami bertahan bukan karena semuanya mudah, melainkan karena doa yang tak putus, hati yang tetap memilih, dan keyakinan bahwa setiap luka akan bermuara pada restu. Hingga akhirnya, dua keluarga dipersatukan dalam harap yang sama.
+              </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div data-aos="fade-left" style="background: rgba(255, 255, 255, 0.03); border-right: 4px solid var(--primary); border-radius: 15px 0 0 15px; padding: 30px; margin-bottom: 40px; backdrop-filter: blur(10px); position: relative; text-align: right; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              <h3 style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; justify-content: flex-end; gap: 10px;">
+                Takdir & Keyakinan <i class='bx bxs-star'></i>
+              </h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin-bottom: 15px;">
+                Kami mengerti, tidak semua jalan berjalan mudah, dan tidak setiap doa dijawab secepat harapan. Namun di setiap jeda, kami belajar percaya pada Sang Maha Cintaâ€”yang selalu tahu ke mana hati harus pulang.
+              </p>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin: 0;">
+                Kami meyakini bahwa takdir terbaik selalu menemukan jalannya. Kini, dengan penuh syukur, kami menantikan hari sakral ketika dua jiwa dipersatukan dalam satu ikatan suci.
+              </p>
+            </div>
+
+            <!-- Item 5 -->
+            <div data-aos="fade-up" style="background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--primary); border-radius: 0 15px 15px 0; padding: 30px; margin-bottom: 20px; backdrop-filter: blur(10px); position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              <h3 style="color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <i class='bx bxs-ring'></i> Menuju Hari Itu
+              </h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.8; margin-bottom: 15px;">
+                Sebentar lagi, kisah ini akan melangkah ke babak baruâ€”saat dua perjalanan menjadi satu tujuan, dan dua hati berjalan bersama dalam naungan cinta-Nya.
+              </p>
+              <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.8; margin: 0; font-weight: 600;">
+                Doakan kami, agar setiap langkah ke depan selalu dipeluk oleh lembutnya takdir, dikuatkan oleh kasih Sang Maha Cinta, dan diberkahi kebahagiaan yang tak lekang oleh waktu. ðŸ¤âœ¨
+              </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+              <i class='bx bxs-quote-alt-right' style="font-size: 3rem; color: var(--primary); opacity: 0.5;"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Gallery Section (3x3 Grid) -->
+      <section id="gallery" class="gallery-section">
+        <div class="container" style="max-width: 1200px;">
+          <div class="gallery-header" data-aos="fade-up" style="margin-bottom: 1rem;">
+            <span class="gallery-eyebrow">Our Memories</span>
+            <h2 class="section-title" style="margin-bottom: 0.5rem; letter-spacing: 3px; font-size: 2.5rem;">Galeri & Momen</h2>
+            <p class="subtitle" style="color: var(--text-light); margin-bottom: 3rem; font-style: italic; font-weight: 300;">"Kumpulan detik yang membeku, bercerita tentang kebersamaan kita."</p>
+          </div>
+          
+          <div class="gallery-horizontal-slider" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-marquee-container">
+              <!-- Baris Atas (Berjalan ke Kanan) -->
+              <div class="gallery-marquee-track reverse" style="margin-bottom: 5px;">
+                <!-- First Set -->
+                <div class="h-slide" style="background-image: url('img/tema 0.1.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.2.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.3.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.3.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.4.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.8.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.5.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.9.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.10.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.6.jpeg');"></div>
+                
+                <!-- Second Set (Duplicate) -->
+                <div class="h-slide" style="background-image: url('img/tema 0.1.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.2.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.3.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.3.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.4.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.8.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.5.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.9.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.10.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.6.jpeg');"></div>
+              </div>
+              
+              <!-- Baris Bawah (Berjalan ke Kiri) -->
+              <div class="gallery-marquee-track">
+                <!-- First Set -->
+                <div class="h-slide" style="background-image: url('img/tema 0.11.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.20.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.12.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.8.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.15.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.19.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.16.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.2.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.17.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.18.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.4.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.21.jpeg');"></div>
+                <!-- Second Set (Duplicate) -->
+                <div class="h-slide" style="background-image: url('img/tema 0.11.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.20.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.12.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.8.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.15.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.7.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.19.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.16.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.2.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.17.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.18.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 1.4.jpeg');"></div>
+                <div class="h-slide" style="background-image: url('img/tema 0.21.jpeg');"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Detail Section -->
+      <section id="event" class="event-section">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Rangkaian Acara</h2>
+
+          <div class="modern-events">
+            <!-- Akad Card -->
+            <div class="modern-event-card akad-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="event-bg-number">23</div>
+              <div class="event-content">
+                <div class="event-header">
+                  <i class="bx bx-book-heart"></i>
+                  <h3>Akad Nikah</h3>
+                </div>
+                <div class="event-date">
+                  <span class="day">Kamis</span>
+                  <span class="date-full">23 Juli 2026</span>
+                </div>
+                <hr class="event-divider">
+                <div class="event-details">
+                  <p><i class='bx bx-time-five'></i> <span>09.00 WITA - Selesai</span></p>
+                  <p><i class='bx bx-map-pin'></i> <span><strong>Kediaman Mempelai Perempuan</strong></span></p>
+                </div>
+                <a href="https://maps.app.goo.gl/M5Bon6sRREpzEGEt5?g_st=iw" target="_blank" class="btn-outline modern-btn">Lihat Peta</a>
+              </div>
+            </div>
+
+            <!-- Resepsi Card -->
+            <div class="modern-event-card resepsi-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="event-bg-number">24</div>
+              <div class="event-content">
+                <div class="event-header">
+                  <i class="bx bx-glass"></i>
+                  <h3>Resepsi</h3>
+                </div>
+                <div class="event-date">
+                  <span class="day">Jumat</span>
+                  <span class="date-full">24 Juli 2026</span>
+                </div>
+                <hr class="event-divider">
+                <div class="event-details">
+                  <p><i class='bx bx-time-five'></i> <span>15.00 WITA - Selesai</span></p>
+                  <p><i class='bx bx-map-pin'></i> <span><strong>Lapangan Sepakbola</strong><br/>Desa Doridungga, Kec. Donggo, Kab. Bima</span></p>
+                </div>
+                <a href="https://maps.app.goo.gl/M5Bon6sRREpzEGEt5?g_st=iw" target="_blank" class="btn-outline modern-btn">Lihat Peta</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wedding Gift Section -->
+      <section id="gift" class="gift-section" style="padding: 100px 0; background: var(--bg-dark); position: relative; z-index: 2;">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up" style="color: var(--primary); font-family: 'Playfair Display', serif; text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Wedding Gift</h2>
+          <p data-aos="fade-up" data-aos-delay="100" style="text-align: center; color: var(--text-light); max-width: 600px; margin: 0 auto 50px; line-height: 1.6;">
+            Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih untuk kami, dapat melalui:
+          </p>
+
+          <div class="gift-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;" data-aos="zoom-in" data-aos-delay="200">
+            <!-- Bank Card 1 -->
+            <div class="gift-card" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); border-radius: 15px; padding: 30px; text-align: center; width: 100%; max-width: 350px; backdrop-filter: blur(10px);">
+              <i class='bx bxs-bank' style="font-size: 3rem; color: var(--primary); margin-bottom: 15px;"></i>
+              <h3 style="color: var(--white); margin-bottom: 10px; font-size: 1.2rem; letter-spacing: 2px;">MANDIRI</h3>
+              <p style="color: var(--primary); font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 5px; font-family: monospace;" id="rek-mandiri">1640004274066</p>
+              <p style="color: var(--text-light); margin-bottom: 20px; font-size: 0.9rem;">a.n. Nurfadilah</p>
+              <button onclick="copyToClipboard('1640004274066', this)" class="btn-outline" style="width: 100%; padding: 10px; font-size: 0.9rem;">
+                <i class='bx bx-copy'></i> Salin Rekening
+              </button>
+            </div>
+
+            <!-- Bank Card 2 -->
+            <div class="gift-card" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); border-radius: 15px; padding: 30px; text-align: center; width: 100%; max-width: 350px; backdrop-filter: blur(10px);">
+              <i class='bx bxs-bank' style="font-size: 3rem; color: var(--primary); margin-bottom: 15px;"></i>
+              <h3 style="color: var(--white); margin-bottom: 10px; font-size: 1.2rem; letter-spacing: 2px;">BCA</h3>
+              <p style="color: var(--primary); font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 5px; font-family: monospace;" id="rek-bca">5225166878</p>
+              <p style="color: var(--text-light); margin-bottom: 20px; font-size: 0.9rem;">a.n. Nurfadilah</p>
+              <button onclick="copyToClipboard('5225166878', this)" class="btn-outline" style="width: 100%; padding: 10px; font-size: 0.9rem;">
+                <i class='bx bx-copy'></i> Salin Rekening
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP & QR Code Section -->
+      <section id="rsvp" class="rsvp-section">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Kehadiran & Ucapan</h2>
+          <p class="rsvp-desc" data-aos="fade-up" data-aos-delay="100">
+            Silakan konfirmasi kehadiran Anda melalui form di bawah ini.
+          </p>
+
+          <div class="rsvp-container" data-aos="zoom-in" data-aos-delay="200">
+            <form id="rsvp-form" class="rsvp-form">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Contoh: Budi Santoso"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="attendance">Konfirmasi Kehadiran</label>
+                <select id="attendance" name="attendance" required>
+                  <option value="" disabled selected>
+                    Pilih Status Kehadiran
+                  </option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pax">Jumlah Orang</label>
+                <input type="number" id="pax" name="pax" min="1" placeholder="Contoh: 2" required>
+              </div>
+
+
+              <div class="form-group">
+                <label for="message">Ucapan / Doa</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tuliskan doa dan ucapan untuk kedua mempelai..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-100">
+                Kirim Konfirmasi
+              </button>
+            </form>
+
+            <div id="qr-result" class="qr-result hidden">
+              <div class="success-icon"><i class="bx bx-check-circle"></i></div>
+              <h3>Terima Kasih!</h3>
+              <p>
+                Data Anda telah tersimpan. Kami menantikan kehadiran Anda di acara pernikahan kami.
+              </p>
+
+              <div class="qr-info">
+                <p>
+                  <strong>Nama:</strong> <span id="qr-name-display">-</span>
+                </p>
+                <p>
+                  <strong>Status:</strong> <span id="qr-status-display">-</span>
+                </p>
+              </div>
+
+              <button
+                id="reset-btn"
+                type="button"
+                class="btn-outline w-100 mt-3"
+              >
+                Kembali
+              </button>
+            </div>
+            </div>
+          </div>
+
+          <!-- Guestbook / Wishes List -->
+          <div class="guestbook-container" data-aos="fade-up" data-aos-delay="300" style="margin-top: 50px;">
+            <h3 style="text-align: center; color: var(--white); margin-bottom: 15px; font-family: 'Playfair Display', serif; font-size: 3.5rem; letter-spacing: 2px; text-transform: uppercase;">Wishes</h3>
+            <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; padding: 0 15px;">
+                Terima kasih atas segala doa, ucapan, dan harapan baik yang telah Anda berikan. Setiap kata yang tertulis sangatlah berarti dan menjadi kado istimewa di hari bahagia kami.
+            </p>
+            <div id="guestbook-slider" style="position: relative; display: flex; justify-content: center; width: 100%; height: 400px; overflow: hidden; padding: 15px; border-radius: 15px; border: 1px solid var(--border-glass); background: rgba(0,0,0,0.3);">
+                <div id="guestbook-list" class="guestbook-list auto-scroll-up" style="width: 100%; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+                    <!-- Wishes will be populated here by JS -->
+                    <p style="text-align: center; color: var(--text-light);">Jadilah yang pertama memberikan ucapan!</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      <!-- Thank You Section -->
+      <section class="thank-you-section" style="padding: 60px 15px; background-color: var(--bg-dark);">
+        <div style="width: 100%; max-width: 600px; margin: 0 auto; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.9);" data-aos="zoom-in">
+          
+          <!-- Bagian Atas (Foto) -->
+          <img src="img/tema 0.12.jpeg" alt="Dilah & Dinul" style="width: 100%; height: 50vh; min-height: 350px; max-height: 500px; object-fit: cover; object-position: center 15%; display: block; filter: brightness(1.3) contrast(1.15) saturate(1.1);">
+          
+          <!-- Bagian Bawah (Teks + Background) -->
+          <div style="position: relative; padding: 50px 20px; text-align: center; background-image: url('img/tema 0.18.jpeg'); background-size: cover; background-position: center;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.65); z-index: 1;"></div>
+            
+            <div style="position: relative; z-index: 2;">
+              <h2 style="font-family: var(--font-accent); font-size: clamp(3rem, 10vw, 3.5rem); color: var(--primary); margin-bottom: 20px; letter-spacing: 2px;">Thank You</h2>
+              <p style="color: rgba(255,255,255,0.95); font-size: clamp(0.95rem, 4vw, 1rem); line-height: 1.7; margin-bottom: 30px; max-width: 90%; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                Kehadiran serta doa restu dari Bapak/Ibu/Saudara/i merupakan hadiah terindah bagi kami. Terima kasih telah meluangkan waktu untuk menjadi bagian dari momen paling bersejarah dalam lembaran baru kehidupan kami.
+              </p>
+              <h3 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 6vw, 2.2rem); color: var(--white); font-weight: bold; margin: 0; letter-spacing: 1px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Dilah & Dinul</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <h2>Dilah & Dinul</h2>
+          <p>Terima kasih atas doa dan restu Anda.</p>
+          <div class="credits">
+            <p>
+              Created with <i class="bx bxs-heart"></i> for your special day.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
